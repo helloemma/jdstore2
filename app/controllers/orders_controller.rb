@@ -13,7 +13,9 @@ class OrdersController < ApplicationController
     end
   end
 
-  private order_params
-      params.require(:order).permit(:billing_name, billing_address, :shiping_name, :shipping_address)
+  private
+  
+  def order_params
+      params.require(:order).permit(:billing_name, :billing_address, :shiping_name, :shipping_address)
   end
 end
